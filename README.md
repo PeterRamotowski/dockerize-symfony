@@ -50,3 +50,4 @@ docker-compose down
 8. Adminer and phpMyAdmin database management tools
 9. Git
 10. Cron job for messenger
+11. Redis and phpRedisAdmin
