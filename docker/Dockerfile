@@ -31,9 +31,9 @@ RUN docker-php-ext-install bcmath bz2 calendar dba exif gettext iconv intl && \
     docker-php-ext-install opcache soap tidy gd xsl zip sockets
 
 RUN pecl update-channels && pecl install -s -o redis && \
-    pecl install -s -o xdebug
+    pecl install -s -o xdebug && pecl install -s -o apcu
 
-RUN docker-php-ext-enable redis xdebug
+RUN docker-php-ext-enable redis xdebug apcu
 
 # install imagick
 RUN apt-get update && apt-get install -y \
